@@ -2,6 +2,10 @@
 
 > A shipping cost calculator for (overseas) online purchases destined for Zambia
 
+| Statements                  | Branches                | Functions                 | Lines             |
+| --------------------------- | ----------------------- | ------------------------- | ----------------- |
+| ![Statements](https://img.shields.io/badge/statements-100%25-brightgreen.svg?style=flat&logo=jest) | ![Branches](https://img.shields.io/badge/branches-100%25-brightgreen.svg?style=flat&logo=jest) | ![Functions](https://img.shields.io/badge/functions-100%25-brightgreen.svg?style=flat&logo=jest) | ![Lines](https://img.shields.io/badge/lines-100%25-brightgreen.svg?style=flat&logo=jest) |
+
 [![CI/CD](https://github.com/engineervix/zed-shipping/actions/workflows/main.yml/badge.svg)](https://github.com/engineervix/zed-shipping/actions/workflows/main.yml)
 
 [![Node v16](https://img.shields.io/badge/Node-v16-teal.svg)](https://nodejs.org/en/blog/release/v16.0.0)
