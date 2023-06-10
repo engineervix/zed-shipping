@@ -20,7 +20,7 @@
       content="A shipping cost calculator for (overseas) online purchases destined for Zambia"
     />
     <meta property="og:site_name" content="Zed Shipping" />
-    <meta property="og:url" content="https://zed-shipping.pages.dev/" />
+    <meta property="og:url" content="https://zedshipping.pages.dev/" />
     <meta
       property="og:image"
       content="https://source.unsplash.com/4aOhA4ptIY4/480x270"
@@ -51,23 +51,31 @@
     <link rel="stylesheet" href="css/main.scss" />
     <title>Zed Shipping » Home</title>
   </head>
-  <body>
-    <h1>Shipping Calculator</h1>
-    <form id="shipping-form">
-      <label for="weight">Package Weight (in kg):</label>
-      <input type="number" id="weight" step="0.01" required />
-      <label for="source">Package Source:</label>
-      <select id="source" required>
-        <option value="USA">USA</option>
-        <option value="UK">UK</option>
-      </select>
-      <button type="submit">Calculate</button>
-    </form>
-
-    <div id="result" style="display: none">
-      <h2>Shipping Cost:</h2>
-      <p id="cost"></p>
-    </div>
+  <body class="dark-mode">
+    <main>
+      <section class="container dark-mode">
+        <h1>Shipping Calculator</h1>
+        <form id="shipping-form">
+          <label for="weight">Package Weight (in kg):</label>
+          <input
+            type="number"
+            id="weight"
+            step="0.01"
+            class="dark-mode"
+            required
+          />
+          <label for="source">Package Source:</label>
+          <select id="source" class="dark-mode" required>
+            <option value="USA">USA</option>
+            <option value="UK">UK</option>
+          </select>
+          <button type="submit" class="dark-mode">Calculate</button>
+        </form>
+        <div id="result" style="display: none">
+          <p class="shipping-cost">Shipping Cost: <span id="cost"></span></p>
+        </div>
+      </section>
+    </main>
     <script type="module" src="js/main.js"></script>
   </body>
 </html>
