@@ -11,6 +11,16 @@
 [![Conventional Changelog](https://img.shields.io/badge/changelog-conventional-brightgreen.svg)](http://conventional-changelog.github.io)
 [![Conventional Commits](https://img.shields.io/badge/Conventional%20Commits-1.0.0-yellow.svg)](https://conventionalcommits.org)
 
+<!-- START doctoc generated TOC please keep comment here to allow auto update -->
+<!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
+
+- [Development](#development)
+- [Contributing](#contributing)
+- [TODO](#todo)
+- [Credits](#credits)
+
+<!-- END doctoc generated TOC please keep comment here to allow auto update -->
+
 ## Development
 
 This project uses Node [v16](https://nodejs.org/en/blog/release/v16.0.0). I use [volta](https://volta.sh/) to manage node versions. If you have volta installed on your machine, then it'll automatically use the correct Node binary for this project.
@@ -66,6 +76,7 @@ In addition, please note the following:
   - [ ] etc.
 - [ ] Incorporate exchange rates
 - [ ] Compare costs between different providers
+- [ ] Toggle dark/light mode
 
 ## Credits
 
