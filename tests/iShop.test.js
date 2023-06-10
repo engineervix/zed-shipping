@@ -27,23 +27,63 @@ describe("roundUp", () => {
 
 describe("calculateShippingCost", () => {
   it("should return the correct shipping cost for USA", () => {
-    const weight = 0.3;
-    const source = "USA";
-    const expectedCost = 9.73;
+    const weight1 = 0.3;
+    const source1 = "USA";
+    const expectedCost1 = 13.86;
 
-    const result = calculateShippingCost(weight, source);
+    const result1 = calculateShippingCost(weight1, source1);
 
-    expect(result).toEqual(expectedCost);
+    expect(result1).toEqual(expectedCost1);
+
+    const weight2 = 0.7;
+    const source2 = "USA";
+    const expectedCost2 = 19.5;
+
+    const result2 = calculateShippingCost(weight2, source2);
+
+    expect(result2).toEqual(expectedCost2);
+
+    const weight3 = 1.5;
+    const source3 = "USA";
+    const expectedCost3 = 25.14;
+
+    const result3 = calculateShippingCost(weight3, source3);
+
+    expect(result3).toEqual(expectedCost3);
   });
 
   it("should return the correct shipping cost for UK", () => {
-    const weight = 0.7;
-    const source = "UK";
-    const expectedCost = 10.62;
+    const weight1 = 0.1;
+    const source1 = "UK";
+    const expectedCost1 = 6.5;
 
-    const result = calculateShippingCost(weight, source);
+    const result1 = calculateShippingCost(weight1, source1);
 
-    expect(result).toEqual(expectedCost);
+    expect(result1).toEqual(expectedCost1);
+
+    const weight2 = 0.4;
+    const source2 = "UK";
+    const expectedCost2 = 8.48;
+
+    const result2 = calculateShippingCost(weight2, source2);
+
+    expect(result2).toEqual(expectedCost2);
+
+    const weight3 = 0.9;
+    const source3 = "UK";
+    const expectedCost3 = 12.46;
+
+    const result3 = calculateShippingCost(weight3, source3);
+
+    expect(result3).toEqual(expectedCost3);
+
+    const weight4 = 1.8;
+    const source4 = "UK";
+    const expectedCost4 = 20.42;
+
+    const result4 = calculateShippingCost(weight4, source4);
+
+    expect(result4).toEqual(expectedCost4);
   });
 
   it("should return null for an unknown source", () => {

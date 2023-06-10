@@ -15,6 +15,9 @@
     },
     "development": {
       "presets": ["@babel/env"]
+    },
+    "test": {
+      "presets": ["@babel/env"]
     }
   }
 }

@@ -17,9 +17,9 @@ export function roundUp(n) {
  */
 export function calculateShippingCost(weight, source) {
   if (source === "USA") {
-    const oneKgPrice = 13.71;
-    const halfKgPrice = 9.73;
-    const pricePerExtraHalfKg = 3.98;
+    const oneKgPrice = 19.5;
+    const halfKgPrice = 13.86;
+    const pricePerExtraHalfKg = 5.64;
 
     if (weight <= 0.5) {
       return halfKgPrice;
@@ -35,10 +35,10 @@ export function calculateShippingCost(weight, source) {
 
     return totalCost;
   } else if (source === "UK") {
-    const oneKgPrice = 10.62;
-    const halfKgPrice = 7.31;
-    const quarterKgPrice = 5.66;
-    const pricePerExtraHalfKg = 3.31;
+    const oneKgPrice = 12.46;
+    const halfKgPrice = 8.48;
+    const quarterKgPrice = 6.5;
+    const pricePerExtraHalfKg = 3.98;
 
     if (weight <= 0.25) {
       return quarterKgPrice;
