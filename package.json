@@ -15,6 +15,7 @@
     "lint:format": "prettier --check 'src/**/?(.)*.{md,css,scss,js,json,yaml,yml}'",
     "lint": "npm run lint:js && npm run lint:style && npm run lint:format",
     "css-fix": "npx stylelint src/css/ --fix",
+    "release": "standard-version",
     "test": "jest"
   },
   "dependencies": {
