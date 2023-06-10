@@ -1,0 +1,155 @@
+{
+  "name": "zed-shipping",
+  "version": "0.0.0",
+  "description": "A shipping cost calculator for online purchases destined for Zambia",
+  "author": "Victor Miti <victormiti@gmail.com>",
+  "license": "BSD-3-Clause",
+  "private": true,
+  "scripts": {
+    "start": "parcel src/index.html --open",
+    "build": "parcel build src/index.html",
+    "clean": "rimraf dist && rimraf .parcel-cache",
+    "commit": "git-cz",
+    "lint:js": "eslint --ext \".js\" --ignore-path .gitignore .",
+    "lint:style": "stylelint \"**/*.{scss,css}\" --ignore-path .gitignore",
+    "lint:format": "prettier --check 'src/**/?(.)*.{md,css,scss,js,json,yaml,yml}'",
+    "lint": "npm run lint:js && npm run lint:style && npm run lint:format",
+    "css-fix": "npx stylelint src/css/ --fix",
+    "test": "jest"
+  },
+  "dependencies": {
+    "parcel": "^2.9.2"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.22.5",
+    "@babel/core": "^7.22.5",
+    "@babel/eslint-parser": "^7.22.5",
+    "@babel/preset-env": "^7.22.5",
+    "@parcel/packager-raw-url": "^2.9.2",
+    "@parcel/transformer-sass": "^2.9.2",
+    "@parcel/transformer-webmanifest": "^2.9.2",
+    "babel-jest": "^29.5.0",
+    "commitizen": "^4.3.0",
+    "cz-conventional-changelog": "^3.3.0",
+    "eslint": "^8.42.0",
+    "eslint-config-prettier": "^8.8.0",
+    "eslint-plugin-prettier": "^4.2.1",
+    "jest": "^29.5.0",
+    "prettier": "^2.8.8",
+    "rimraf": "^5.0.1",
+    "standard-version": "^9.5.0",
+    "stylelint": "^15.7.0",
+    "stylelint-config-standard-scss": "^9.0.0"
+  },
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-conventional-changelog"
+    }
+  },
+  "eslintConfig": {
+    "rules": {},
+    "env": {
+      "es6": true,
+      "node": true,
+      "browser": true,
+      "jest/globals": true
+    },
+    "parserOptions": {
+      "ecmaVersion": 2018,
+      "sourceType": "module"
+    },
+    "extends": [
+      "eslint:recommended",
+      "plugin:prettier/recommended"
+    ],
+    "globals": {
+      "Atomics": "readonly",
+      "SharedArrayBuffer": "readonly"
+    }
+  },
+  "stylelint": {
+    "extends": [
+      "stylelint-config-standard-scss"
+    ],
+    "rules": {
+      "at-rule-no-unknown": null,
+      "scss/at-rule-no-unknown": true,
+      "scss/at-import-partial-extension": null
+    },
+    "ignoreFiles": [
+      "**/dist/**/*.*"
+    ]
+  },
+  "browserslist": [
+    "defaults",
+    "cover 99.5%"
+  ],
+  "standard-version": {
+    "header": "# Changelog\n\nAll notable changes to this project will be documented here.\n\nThe format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/), and this project attempts to adhere to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).\n",
+    "types": [
+      {
+        "type": "feat",
+        "section": "🚀 Features"
+      },
+      {
+        "type": "fix",
+        "section": "🐛 Bug Fixes"
+      },
+      {
+        "type": "docs",
+        "section": "📝 Docs",
+        "hidden": false
+      },
+      {
+        "type": "style",
+        "section": "💄 Styling",
+        "hidden": false
+      },
+      {
+        "type": "refactor",
+        "hidden": false,
+        "section": "♻️ Code Refactoring"
+      },
+      {
+        "type": "perf",
+        "section": "⚡️ Performance Improvements",
+        "hidden": false
+      },
+      {
+        "type": "test",
+        "section": "✅ Tests",
+        "hidden": false
+      },
+      {
+        "type": "build",
+        "section": "⚙️ Build System",
+        "hidden": false
+      },
+      {
+        "type": "ci",
+        "section": "👷 CI/CD",
+        "hidden": false
+      },
+      {
+        "type": "chore",
+        "section": "🚧 Others",
+        "hidden": true
+      },
+      {
+        "type": "revert",
+        "section": "⏪️ Reverts",
+        "hidden": true
+      }
+    ],
+    "scripts": {
+      "prechangelog": "sed -e '1,6d' -i CHANGELOG.md",
+      "postchangelog": "sed -e 's/###\\ \\[/##\\ \\[v/g' -i CHANGELOG.md && sed -re 's/##\\ \\[([0-9])/##\\ \\[v\\1/g' -i CHANGELOG.md"
+    }
+  },
+  "engines": {
+    "node": "^16 <17"
+  },
+  "volta": {
+    "node": "16.20.0"
+  }
+}

@@ -1,0 +1,98 @@
+name: CI/CD
+
+# Enable Buildkit and let compose use it to speed up image building
+env:
+  DOCKER_BUILDKIT: 1
+  COMPOSE_DOCKER_CLI_BUILD: 1
+
+on:
+  pull_request:
+    branches: ["main"]
+
+  push:
+    branches: ["main"]
+    tags:
+      - "v*"
+
+jobs:
+  linter_stylelint:
+    runs-on: ubuntu-22.04
+
+    steps:
+      - name: Checkout Code Repository
+        uses: actions/checkout@v3
+
+      - uses: actions/setup-node@v3
+        with:
+          node-version: 16
+          cache: "npm"
+
+      - name: Install Dependencies
+        run: |
+          npm ci
+
+      - name: Stylelint
+        run: |
+          npm run lint:style
+
+  linter_eslint:
+    runs-on: ubuntu-22.04
+
+    steps:
+      - name: Checkout Code Repository
+        uses: actions/checkout@v3
+
+      - uses: actions/setup-node@v3
+        with:
+          node-version: 16
+          cache: "npm"
+
+      - name: Install Dependencies
+        run: |
+          npm ci
+
+      - name: ESLint
+        run: |
+          npm run lint:js
+
+  linter_prettier:
+    runs-on: ubuntu-22.04
+
+    steps:
+      - name: Checkout Code Repository
+        uses: actions/checkout@v3
+
+      - uses: actions/setup-node@v3
+        with:
+          node-version: 16
+          cache: "npm"
+
+      - name: Install Dependencies
+        run: |
+          npm ci
+
+      - name: Prettier
+        run: |
+          npm run lint:format
+
+  test:
+    runs-on: ubuntu-22.04
+    needs: [linter_stylelint, linter_eslint, linter_prettier]
+
+    steps:
+      - name: Checkout Code Repository
+        uses: actions/checkout@v3
+
+      - uses: actions/setup-node@v3
+        with:
+          node-version: 16
+          cache: "npm"
+
+      - name: Install Dependencies
+        run: |
+          npm ci
+
+      - name: Test with jest
+        shell: bash
+        run: |
+          npm test -- --ci --reporters="github-actions"

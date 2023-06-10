@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1 , shrink-to-fit=no"
+    />
+    <meta
+      name="description"
+      content="A shipping cost calculator for (overseas) online purchases destined for Zambia"
+    />
+    <meta name="author" content="Victor Miti" />
+
+    <meta property="og:title" content="Zed Shipping » Home" />
+    <meta property="og:type" content="website" />
+    <meta
+      property="og:description"
+      content="A shipping cost calculator for (overseas) online purchases destined for Zambia"
+    />
+    <meta property="og:site_name" content="Zed Shipping" />
+    <meta property="og:url" content="https://zed-shipping.pages.dev/" />
+    <meta
+      property="og:image"
+      content="https://source.unsplash.com/4aOhA4ptIY4/480x270"
+    />
+    <meta property="og:locale" content="en_ZM" />
+    <meta property="og:locale:alternate" content="en_ZA" />
+    <meta property="og:locale:alternate" content="en_GB" />
+    <meta property="og:locale:alternate" content="en_US" />
+
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="ico/apple-touch-icon.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="ico/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="ico/favicon-16x16.png"
+    />
+    <link rel="manifest" href="ico/site.webmanifest" />
+    <link rel="stylesheet" href="css/main.scss" />
+    <title>Zed Shipping » Home</title>
+  </head>
+  <body>
+    <h1>Shipping Calculator</h1>
+    <form id="shipping-form">
+      <label for="weight">Package Weight (in kg):</label>
+      <input type="number" id="weight" step="0.01" required />
+      <label for="source">Package Source:</label>
+      <select id="source" required>
+        <option value="USA">USA</option>
+        <option value="UK">UK</option>
+      </select>
+      <button type="submit">Calculate</button>
+    </form>
+
+    <div id="result" style="display: none">
+      <h2>Shipping Cost:</h2>
+      <p id="cost"></p>
+    </div>
+    <script type="module" src="js/main.js"></script>
+  </body>
+</html>
