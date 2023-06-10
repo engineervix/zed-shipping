@@ -2,8 +2,8 @@
 
 > A shipping cost calculator for (overseas) online purchases destined for Zambia
 
-| Statements                  | Branches                | Functions                 | Lines             |
-| --------------------------- | ----------------------- | ------------------------- | ----------------- |
+| Statements                                                                                         | Branches                                                                                       | Functions                                                                                        | Lines                                                                                    |
+| -------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------ | ---------------------------------------------------------------------------------------- |
 | ![Statements](https://img.shields.io/badge/statements-100%25-brightgreen.svg?style=flat&logo=jest) | ![Branches](https://img.shields.io/badge/branches-100%25-brightgreen.svg?style=flat&logo=jest) | ![Functions](https://img.shields.io/badge/functions-100%25-brightgreen.svg?style=flat&logo=jest) | ![Lines](https://img.shields.io/badge/lines-100%25-brightgreen.svg?style=flat&logo=jest) |
 
 [![CI/CD](https://github.com/engineervix/zed-shipping/actions/workflows/main.yml/badge.svg)](https://github.com/engineervix/zed-shipping/actions/workflows/main.yml)
@@ -44,6 +44,18 @@ This project uses Node [v16](https://nodejs.org/en/blog/release/v16.0.0). I use 
   ```
 
 See other available scripts in `package.json`.
+
+**Create a release**
+
+```shell
+python misc/release.py bump
+```
+
+**Update coverage badges**
+
+```shell
+npx istanbul-badges-readme --logo="jest"
+```
 
 ## Contributing
 
