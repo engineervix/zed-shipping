@@ -2,6 +2,7 @@
 https://www.paulirish.com/2012/box-sizing-border-box-ftw/ */
 html {
   box-sizing: border-box;
+  height: -webkit-fill-available; /* stylelint-disable-line value-no-vendor-prefix */
 }
 
 /* inherit border-box on all elements globally and before and after */

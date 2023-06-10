@@ -22,7 +22,17 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 
     const cost = calculateShippingCost(weight, source);
-    costParagraph.textContent = `£${cost.toFixed(2)}`;
+    const costAnchor = document.createElement("a");
+    costAnchor.textContent = `£${cost.toFixed(2)}`;
+    costAnchor.href = `https://www.xe.com/currencyconverter/convert/?Amount=${cost.toFixed(
+      2
+    )}&From=GBP&To=ZMW`;
+    costAnchor.target = "_blank";
+    costAnchor.rel = "noopener noreferrer";
+    costAnchor.title = "Click to convert to Kwacha";
+    costAnchor.classList.add("dark-mode");
+    costParagraph.innerHTML = "";
+    costParagraph.appendChild(costAnchor);
     resultDiv.style.display = "block";
   });
 });
