@@ -99,10 +99,10 @@ def execute_bump_hack(branch, is_first_release=False, major=False):
             print(
                 f"{Fore.GREEN}let me retrieve the tag we're bumping from ...{Fore.RESET}"
             )
-            get_current_tag = os.system(
+            get_current_tag = subprocess.getoutput(
                 "git describe --abbrev=0 --tags `git rev-list --tags --skip=0  --max-count=1`"
             )
-            previous_tag = get_current_tag.stdout.rstrip()
+            previous_tag = get_current_tag.rstrip()
             os.system(
                 f'npm run release -- --commit-all --release-as {release_type} --releaseCommitMessageFormat "bump: ✈️ {previous_tag} → v{{{{currentTag}}}}"'
             )
