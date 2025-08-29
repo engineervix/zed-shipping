@@ -134,9 +134,20 @@
                 >
               </div>
             </div>
-            <small :class="['mt-2 block', isDark ? 'text-gray-400' : 'text-gray-500']"
-              >For volumetric weight calculation</small
-            >
+            <small :class="['mt-2 block', isDark ? 'text-gray-400' : 'text-gray-500']">
+              <span class="flex items-center">
+                <span>For volumetric weight calculation</span>
+                <i
+                  class="pi pi-question-circle ml-2 cursor-pointer text-gray-400"
+                  v-tooltip.top="{
+                    value:
+                      'Calculated as (Length × Width × Height) / 6000. The billable weight is the higher of the actual or volumetric weight.',
+                    showDelay: 150,
+                    hideDelay: 150,
+                  }"
+                ></i>
+              </span>
+            </small>
           </div>
 
           <!-- Volumetric Weight Display -->
