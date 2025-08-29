@@ -384,15 +384,35 @@
                 <div :class="['space-y-1', isDark ? 'text-gray-400' : 'text-gray-600']">
                   <div class="flex items-center">
                     <i class="pi pi-phone mr-2 text-green-500"></i>
-                    +260 966 333222
+                    <a
+                      href="tel:+260966333222"
+                      :class="
+                        isDark ? 'text-green-300 hover:underline' : 'text-green-700 hover:underline'
+                      "
+                      >+260 966 333222</a
+                    >
                   </div>
                   <div class="flex items-center">
                     <i class="pi pi-envelope mr-2 text-green-500"></i>
-                    online@oneworld.co.zm
+                    <a
+                      href="mailto:online@oneworld.co.zm"
+                      :class="
+                        isDark ? 'text-green-300 hover:underline' : 'text-green-700 hover:underline'
+                      "
+                      >online@oneworld.co.zm</a
+                    >
                   </div>
                   <div class="flex items-center">
                     <i class="pi pi-globe mr-2 text-green-500"></i>
-                    www.oneworld.co.zm
+                    <a
+                      href="https://www.oneworld.co.zm"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      :class="
+                        isDark ? 'text-green-300 hover:underline' : 'text-green-700 hover:underline'
+                      "
+                      >www.oneworld.co.zm</a
+                    >
                   </div>
                 </div>
               </div>
