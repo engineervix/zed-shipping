@@ -22,5 +22,14 @@ export default defineConfig([
 
   js.configs.recommended,
   ...pluginVue.configs['flat/essential'],
+
+  // Custom rules for PrimeVue components
+  {
+    rules: {
+      'vue/multi-word-component-names': 'off',
+      'vue/no-reserved-component-names': 'off',
+    },
+  },
+
   skipFormatting,
 ])
