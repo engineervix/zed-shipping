@@ -101,3 +101,7 @@ This project includes several scripts to help with development and production wo
 
 - **`npm run format`**
   - Formats all source files in the `src/` directory using Prettier.
+
+## Credits
+
+- **og image**: https://unsplash.com/photos/brown-cardboard-boxes-on-gray-metal-rack-fCyfgmnTj4o
